@@ -30,7 +30,9 @@ public class EnglishWord {
 	
 	private void validateWord(String word) {
 		
-		if(word.isEmpty()) {
+		if(word == null) {
+			this.validWord = false;
+		} else if(word.isEmpty()) {
 			this.validWord = false;
 		} else if(word.contains(" ")) {
 			this.validWord = false;

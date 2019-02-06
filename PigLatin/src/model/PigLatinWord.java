@@ -31,11 +31,13 @@ public class PigLatinWord {
 	
 	private void validateWord(String word) {
 		
-		if(word.isEmpty()) {
+		if(word == null) {
+			this.validWord = false;
+		} else if(word.isEmpty()) {
 			this.validWord = false;
 		} else if(word.contains(" ")) {
 			this.validWord = false;
-		} if(!word.substring(word.length() - 2).equals("ay")) {
+		} else if(!word.substring(word.length() - 2).equals("ay")) {
 			this.validWord = false;
 		} else {
 			this.validWord = true;
